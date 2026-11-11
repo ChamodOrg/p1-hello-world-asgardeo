@@ -6,7 +6,7 @@ export default function HomePage(): JSX.Element {
     <PageContent>
       <Stack spacing={2}>
         <PageTitle>
-          <PageTitle.Header>Hello, World</PageTitle.Header>
+          <PageTitle.Header>Hi, World</PageTitle.Header>
         </PageTitle>
         <Typography variant="body2" color="text.secondary">
           Welcome. This page is open to everyone.

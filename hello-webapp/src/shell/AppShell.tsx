@@ -10,7 +10,7 @@ export default function AppLayout(): JSX.Element {
         <Header>
           <Header.Toggle />
           <Header.Brand>
-            <Header.BrandTitle>Hello World</Header.BrandTitle>
+            <Header.BrandTitle>Hi World</Header.BrandTitle>
           </Header.Brand>
           <Header.Spacer />
           <Header.Actions>
