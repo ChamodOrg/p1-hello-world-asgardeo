@@ -1,0 +1,14 @@
+{
+  "name": "hello-webapp",
+  "type": "web-application",
+  "version": "0.1.0",
+  "language": "TypeScript",
+  "buildpack": "docker",
+  "appPath": "hello-webapp",
+  "entrypoint": "deployment/web-application",
+  "exposure": "internet",
+  "dependencies": [],
+  "description": "The public single-page React app that shows the 'Hello, World' greeting to any visitor. It is its own deployable because it is the product's only user-facing surface. It needs no sign-in, no backend and no storage, and it does not personalise or accept any input.",
+  "stories": ["F1.1", "F1.2"],
+  "skillsPinned": ["react-webapp", "oxygen-ui-design-system"]
+}
