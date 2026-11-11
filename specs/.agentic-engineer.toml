@@ -1,0 +1,4 @@
+apiVersion = "agentic-engineer/v1"
+name = "p1-hello-world-asgardeo"
+createdAt = "2026-11-11T05:16:17Z"
+idea = "simple hello world"
