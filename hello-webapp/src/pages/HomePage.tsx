@@ -1,7 +1,17 @@
 import type { JSX } from "react";
-import { Box, PageContent } from "@wso2/oxygen-ui";
+import { PageContent, PageTitle, Stack, Typography } from "@wso2/oxygen-ui";
 
-// Empty on purpose: the greeting is built by a later item.
 export default function HomePage(): JSX.Element {
-  return <PageContent><Box /></PageContent>;
+  return (
+    <PageContent>
+      <Stack spacing={2}>
+        <PageTitle>
+          <PageTitle.Header>Hello, World</PageTitle.Header>
+        </PageTitle>
+        <Typography variant="body2" color="text.secondary">
+          Welcome. This page is open to everyone.
+        </Typography>
+      </Stack>
+    </PageContent>
+  );
 }
