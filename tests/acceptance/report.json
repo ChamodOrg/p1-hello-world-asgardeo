@@ -1,0 +1,103 @@
+{
+  "schemaVersion": 3,
+  "generatedAt": "2026-11-11T09:15:27.784Z",
+  "commit": "98cb9c7a520989eaf3b8883af5c174df6e08ad11",
+  "baseUrl": "http://http-p1-hello-worl-development-default-40d0dabf.openchoreoapis.localhost:19080/",
+  "isolation": "The app has no containers or writable state; the greeting is static. Each scenario used a fresh browser launch (closed and reopened) and asserted on what rendered, so no shared state between scenarios.",
+  "captureWindow": {
+    "first": "2026-11-11T09:15:23.685Z",
+    "last": "2026-11-11T09:15:23.739Z"
+  },
+  "scenarios": [
+    {
+      "feature": "F1 Greeting",
+      "featureFile": "specs/validation/acceptance/F1-greeting.feature",
+      "line": 6,
+      "rule": "The page greets every visitor with the same fixed \"Hi, World\"",
+      "scenario": "A visitor opens the page",
+      "tags": [
+        "@story-F1.1"
+      ],
+      "outcome": "passed",
+      "steps": [
+        {
+          "text": "Vera the visitor has the page's address",
+          "keyword": "Given",
+          "command": "agent-browser open <url>"
+        },
+        {
+          "text": "Vera opens the page",
+          "keyword": "When",
+          "command": "agent-browser open <url>"
+        },
+        {
+          "text": "she sees the greeting \"Hi, World\"",
+          "keyword": "Then",
+          "command": "agent-browser wait --text \"Hi, World\" --timeout 5000",
+          "exit": 0
+        }
+      ]
+    },
+    {
+      "feature": "F1 Greeting",
+      "featureFile": "specs/validation/acceptance/F1-greeting.feature",
+      "line": 11,
+      "rule": "The page greets every visitor with the same fixed \"Hi, World\"",
+      "scenario": "A second visitor sees the same greeting",
+      "tags": [
+        "@story-F1.1"
+      ],
+      "outcome": "passed",
+      "steps": [
+        {
+          "text": "Vera and Sam have both opened the page",
+          "keyword": "Given",
+          "command": "agent-browser close; agent-browser open <url>"
+        },
+        {
+          "text": "Sam sees exactly the same greeting as Vera",
+          "keyword": "Then",
+          "command": "agent-browser get text h1",
+          "exit": 0,
+          "observed": "Hi, World — identical to first visit's h1"
+        }
+      ]
+    },
+    {
+      "feature": "F1 Greeting",
+      "featureFile": "specs/validation/acceptance/F1-greeting.feature",
+      "line": 18,
+      "rule": "The greeting is shown without any sign-in",
+      "scenario": "A visitor who has never signed in",
+      "tags": [
+        "@story-F1.2"
+      ],
+      "outcome": "passed",
+      "steps": [
+        {
+          "text": "Vera has no account and is not signed in",
+          "keyword": "Given",
+          "command": "agent-browser close (fresh browser, no session state)"
+        },
+        {
+          "text": "Vera opens the page",
+          "keyword": "When",
+          "command": "agent-browser open <url>"
+        },
+        {
+          "text": "she sees the greeting \"Hi, World\"",
+          "keyword": "Then",
+          "command": "agent-browser wait --text \"Hi, World\" --timeout 5000",
+          "exit": 0
+        },
+        {
+          "text": "she is not asked to sign in",
+          "keyword": "And",
+          "command": "agent-browser get count \"a[href*=signin i], a[href*=login i], button:has-text('Sign in')\"",
+          "exit": 0,
+          "observed": "0; url unchanged (no redirect); wait --text \"Sign in\" timed out (absent)"
+        }
+      ]
+    }
+  ]
+}
