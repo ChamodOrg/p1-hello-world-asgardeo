@@ -1,6 +1,6 @@
 {
   "schemaVersion": 3,
-  "name": "Hello World",
+  "name": "Hi World",
   "entryScreen": "screen.greeting",
   "roles": [{ "id": "Visitor", "name": "Visitor" }],
   "states": [{ "id": "state.default", "name": "Default" }],

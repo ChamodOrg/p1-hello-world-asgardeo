@@ -1,4 +1,4 @@
-# Hello World
+# Hi World
 
 ## Problem Statement
 
@@ -6,7 +6,7 @@ Someone wants the smallest possible working web product to confirm that building
 
 ## Solution
 
-A single public page that greets the visitor with "Hello, World".
+A single public page that greets the visitor with "Hi, World".
 
 ## Actors
 

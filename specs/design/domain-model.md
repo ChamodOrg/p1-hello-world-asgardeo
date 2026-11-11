@@ -5,6 +5,6 @@ The product holds no stored records. The only content is a fixed greeting shown 
 ```mermaid
 erDiagram
     GREETING {
-        string text "Hello, World (fixed)"
+        string text "Hi, World (fixed)"
     }
 ```
