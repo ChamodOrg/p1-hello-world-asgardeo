@@ -1,5 +1,5 @@
 title Hi World
 
-component hello-webapp as "Hello Web App" web-application
+component hello-webapp as "Hi Web App" web-application
 
 north -> hello-webapp
